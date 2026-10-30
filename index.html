@@ -221,7 +221,8 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 @keyframes prog{from{width:0}to{width:100%}}
 .phone .drop{position:absolute;left:10%;right:10%;top:40%;text-align:center;font-size:clamp(12px,.95vw,16px);line-height:1.7;color:#D8D2C7;z-index:2;letter-spacing:.02em}
 .phone .drop b{display:block;font-size:clamp(16px,1.4vw,24px);color:#F3EFE8;margin-bottom:6px}
-.phone.loaded .drop{display:none}
+.phone.loaded .drop,.phone.loaded .top,.phone.loaded .prog,.phone.loaded .scene{display:none}
+.phone.loaded{background:#F3F3F3}
 .phone.drag{outline:4px dashed var(--rec);outline-offset:6px}
 
 /* ---------- CH4 ROLES ---------- */
@@ -501,8 +502,9 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
         <p class="insight rv">人は <span class="mark">作られていない瞬間</span>に<br>ほっとするのかもしれない</p>
         <p class="quote rv">使ってみないと なぜ人気なのかもわからない。<br>だから私は なんでも使います。<small>GREEN TSUSHO</small></p>
       </div>
-      <div class="phone rv" id="phone" tabindex="0" role="button" aria-label="動画を選んでスマホ画面で再生">
+      <div class="phone loaded rv" id="phone" tabindex="0" role="button" aria-label="セットログの画面サンプル。クリックで別の動画に差し替え">
         <div class="scene"></div>
+        <video src="setlog-sample.webm" poster="setlog-sample-poster.jpg" autoplay muted loop playsinline aria-hidden="true"></video>
         <div class="top"><span class="rec">REC</span><span id="phone-sec">0.0s / 2.0s</span></div>
         <p class="drop"><b>あなたの2秒</b>ここに動画をドロップ<br>またはクリックで選択</p>
         <div class="prog"></div>
