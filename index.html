@@ -176,6 +176,18 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .def .heart span{color:var(--ink)}
 .def .scr{font-size:clamp(40px,4.6vw,84px);color:var(--pink)}
 
+/* ---------- MY RULE ---------- */
+#rule{background:var(--grain) var(--white)}
+.rule{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(28px,4vw,72px);align-items:center}
+.rule-num{display:flex;flex-direction:column;gap:6px}
+.rule-num .k{font-weight:800;font-size:clamp(22px,2.6vw,46px);line-height:1.3}
+.rule-num .n{font-family:var(--f-num);font-weight:500;font-size:clamp(120px,16vw,300px);line-height:.95;color:var(--pink);letter-spacing:-.01em}
+.rule-num .n small{font-size:.42em;margin-left:.04em}
+.rule-q{list-style:none;padding:0;display:flex;flex-direction:column;gap:clamp(10px,1.6vh,18px)}
+.rule-q li{display:flex;gap:18px;align-items:baseline;background:var(--paper);border:3px solid var(--ink);border-radius:16px;padding:clamp(14px,2.2vh,24px) clamp(18px,2vw,30px);font-weight:700;font-size:clamp(18px,1.8vw,32px);line-height:1.5}
+.rule-q li span{flex:none;font-family:var(--f-num);font-weight:600;color:var(--pink)}
+.rule-note{margin-top:clamp(28px,4vh,52px);font-weight:800;font-size:clamp(24px,3vw,52px);line-height:1.45;word-break:auto-phrase}
+
 /* ---------- CH2 AI ---------- */
 #ch2{background:var(--grain) var(--ink);color:var(--paper)}
 #ch2 .scr{color:var(--paper)}
@@ -320,7 +332,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 @media (max-width:1100px){ .gnav{display:none} }
 @media (max-width:760px){
   .sp{display:inline}
-  .setlog,.two{grid-template-columns:1fr}
+  .setlog,.two,.rule{grid-template-columns:1fr}
   .logotype .tag{display:none}
   .toc{grid-template-columns:1fr 1fr}
   .toc a:nth-child(2n){border-right:none}
@@ -455,6 +467,30 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
       </div>
       <span class="scr">design power</span>
     </div>
+  </div>
+</section>
+
+<!-- MY RULE -->
+<section id="rule" data-label="転換率100%の人">
+  <div class="wrap">
+    <div class="hd rv">
+      <span class="bub">Wow?</span>
+      <div class="row"><span class="scr">my rule</span><h2><em>ワクワクする気持ち</em>を引き出す それがクリエイティブの力</h2></div>
+      <p class="lead">私がいつも大切にしていることがあります。</p>
+    </div>
+    <div class="rule rv">
+      <div class="rule-num">
+        <span class="k">転換率</span>
+        <span class="n">100<small>%</small></span>
+        <span class="k">の人を 想像して作る</span>
+      </div>
+      <ol class="rule-q">
+        <li><span>Q1</span>これを見たら 100％喜ぶ 興味を持つ人は？</li>
+        <li><span>Q2</span>その人は 何人いる？</li>
+        <li><span>Q3</span>どんな人？ どんな毎日を送っている？</li>
+      </ol>
+    </div>
+    <p class="rule-note rv">人数と顔を思い浮かべてから 作りはじめます</p>
   </div>
 </section>
 
