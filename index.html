@@ -89,6 +89,8 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .frame.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .frame.photo::after{opacity:.3}
 .frame.photo .hud{color:#F3EFE8}
+.pairs-note{width:min(100%,880px);background:var(--paper);color:var(--ink);border-radius:16px;padding:clamp(14px,2.2vh,22px) clamp(18px,2.4vw,36px);font-weight:700;font-size:clamp(15px,1.5vw,26px);line-height:1.7;word-break:auto-phrase}
+.pairs-note b{color:var(--pink-deep)}
 .frame{position:relative;aspect-ratio:4/5;border-radius:4px;overflow:hidden;display:grid;place-items:center}
 .frame.gloss{background:radial-gradient(70% 60% at 50% 45%,#FFE3EA,transparent 72%),linear-gradient(160deg,#FFF1F4,#FFC7D5)}
 .frame.raw{background:var(--kraft)}
@@ -384,29 +386,24 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
     </h1>
     <p class="fv-copy">丁寧に<b>盛って</b>選ばれ<br><b>リアル</b>で愛される</p>
     <div class="pairs">
-      <p class="ph"><b>盛る</b><span>FILTER ON</span></p>
+      <p class="ph"><b>盛る</b><span>LIGHT &amp; RETOUCH</span></p>
       <p class="ph"><b>リアル</b><span>NO FILTER</span></p>
-        <div class="frame gloss">
-          <div class="furo is-gloss"><div class="ear l"></div><div class="ear r"></div><div class="body"></div><div class="fold"></div><div class="knot"></div></div>
-          <i class="spark" style="left:12%;top:14%;--s:28px"></i>
-          <i class="spark" style="left:80%;top:22%;--s:18px;--d:.8s"></i>
-          <i class="spark" style="left:84%;top:74%;--s:24px;--d:1.4s"></i>
+        <div class="frame photo mori">
+          <img src="mori-coffee.jpg" alt="光を当てて撮影したアイスコーヒー2杯">
         </div>
         <div class="frame raw photo">
           <img src="real-coffee.jpg" alt="ドリップバッグにお湯を注ぐ手元">
           <div class="hud"><span class="rec">REC</span><span id="rec-sec">00:00</span></div>
         </div>
-        <div class="frame gloss">
-          <div class="furo is-gloss"><div class="ear l"></div><div class="ear r"></div><div class="body"></div><div class="fold"></div><div class="knot"></div></div>
-          <i class="spark" style="left:12%;top:14%;--s:28px"></i>
-          <i class="spark" style="left:80%;top:22%;--s:18px;--d:.8s"></i>
-          <i class="spark" style="left:84%;top:74%;--s:24px;--d:1.4s"></i>
+        <div class="frame photo mori">
+          <img src="mori-cake.jpg" alt="シロップをかけた焼き菓子を照明で引き立てた写真">
         </div>
         <div class="frame raw photo">
           <img src="real-cake.jpg" alt="パウンドケーキを切り分ける手元">
           <div class="hud"><span class="rec">REC</span><span>NO FILTER</span></div>
         </div>
     </div>
+    <p class="pairs-note">ここでの「盛る」は 作り物ではありません<br>本物の商品を <b>ライティングとレタッチ</b>で より美味しく見せることです</p>
   </div>
 </section>
 
