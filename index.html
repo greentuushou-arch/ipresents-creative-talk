@@ -81,6 +81,14 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .fv-copy{font-weight:800;font-size:clamp(24px,2.9vw,50px);line-height:1.45;color:var(--paper);letter-spacing:.08em}
 .fv-copy b{color:var(--ink)}
 .diptych{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,2vw,32px);width:min(100%,760px);margin-top:clamp(8px,2vh,24px)}
+.pairs{display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,1.8vw,28px);width:min(100%,880px);margin-top:clamp(8px,2vh,24px)}
+.pairs .frame{aspect-ratio:1;box-shadow:0 18px 40px rgba(33,29,22,.25)}
+.ph{display:flex;justify-content:center;align-items:baseline;gap:12px}
+.ph b{font-weight:800;font-size:var(--t-h3);color:var(--paper)}
+.ph span{font-family:var(--f-en);font-weight:600;font-size:var(--t-small);letter-spacing:.2em;color:var(--ink)}
+.frame.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.frame.photo::after{opacity:.3}
+.frame.photo .hud{color:#F3EFE8}
 .frame{position:relative;aspect-ratio:4/5;border-radius:4px;overflow:hidden;display:grid;place-items:center}
 .frame.gloss{background:radial-gradient(70% 60% at 50% 45%,#FFE3EA,transparent 72%),linear-gradient(160deg,#FFF1F4,#FFC7D5)}
 .frame.raw{background:var(--kraft)}
@@ -375,24 +383,29 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
       <span class="c re">REAL<span class="tag" aria-hidden="true"><span class="rec">REC</span> NO FILTER</span></span>
     </h1>
     <p class="fv-copy">丁寧に<b>盛って</b>選ばれ<br><b>リアル</b>で愛される</p>
-    <div class="diptych">
-      <div>
+    <div class="pairs">
+      <p class="ph"><b>盛る</b><span>FILTER ON</span></p>
+      <p class="ph"><b>リアル</b><span>NO FILTER</span></p>
         <div class="frame gloss">
           <div class="furo is-gloss"><div class="ear l"></div><div class="ear r"></div><div class="body"></div><div class="fold"></div><div class="knot"></div></div>
           <i class="spark" style="left:12%;top:14%;--s:28px"></i>
           <i class="spark" style="left:80%;top:22%;--s:18px;--d:.8s"></i>
           <i class="spark" style="left:84%;top:74%;--s:24px;--d:1.4s"></i>
         </div>
-        <p class="cap"><b>盛る</b><span>FILTER ON</span></p>
-      </div>
-      <div>
-        <div class="frame raw">
+        <div class="frame raw photo">
+          <img src="real-coffee.jpg" alt="ドリップバッグにお湯を注ぐ手元">
           <div class="hud"><span class="rec">REC</span><span id="rec-sec">00:00</span></div>
-          <div class="furo is-raw"><div class="ear l"></div><div class="ear r"></div><div class="body"></div><div class="fold"></div><div class="knot"></div></div>
-          <span class="ts">'26 11 01</span>
         </div>
-        <p class="cap"><b>リアル</b><span>NO FILTER</span></p>
-      </div>
+        <div class="frame gloss">
+          <div class="furo is-gloss"><div class="ear l"></div><div class="ear r"></div><div class="body"></div><div class="fold"></div><div class="knot"></div></div>
+          <i class="spark" style="left:12%;top:14%;--s:28px"></i>
+          <i class="spark" style="left:80%;top:22%;--s:18px;--d:.8s"></i>
+          <i class="spark" style="left:84%;top:74%;--s:24px;--d:1.4s"></i>
+        </div>
+        <div class="frame raw photo">
+          <img src="real-cake.jpg" alt="パウンドケーキを切り分ける手元">
+          <div class="hud"><span class="rec">REC</span><span>NO FILTER</span></div>
+        </div>
     </div>
   </div>
 </section>
