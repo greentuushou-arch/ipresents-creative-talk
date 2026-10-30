@@ -87,7 +87,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .ph b{font-weight:800;font-size:var(--t-h3);color:var(--paper)}
 .ph span{font-family:var(--f-en);font-weight:600;font-size:var(--t-small);letter-spacing:.2em;color:var(--ink)}
 .frame.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.frame.photo::after{opacity:.3}
+.frame.photo::after{display:none}
 .frame.photo .hud{color:#F3EFE8}
 .pairs-note{width:min(100%,880px);background:var(--paper);color:var(--ink);border-radius:16px;padding:clamp(14px,2.2vh,22px) clamp(18px,2.4vw,36px);font-weight:700;font-size:clamp(15px,1.5vw,26px);line-height:1.7;word-break:auto-phrase}
 .pairs-note b{color:var(--pink-deep)}
@@ -184,6 +184,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .def-txt{display:flex;flex-direction:column;gap:clamp(14px,2.4vh,28px)}
 .def .heart{font-size:clamp(24px,2.8vw,48px);line-height:1.5}
 .def .heart span{color:var(--ink)}
+.def .boom{font-size:clamp(56px,11vw,190px);line-height:1.1;color:var(--pink);letter-spacing:.02em;white-space:nowrap}
 .def .scr{font-size:clamp(40px,4.6vw,84px);color:var(--pink)}
 
 /* ---------- MY RULE ---------- */
@@ -473,7 +474,8 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
     <div class="def rv">
       <div class="def-txt">
         <p class="heart">大切なのは <span class="mark">「心がある丁寧さ」</span></p>
-        <p>ていねいに作ったものを<br><span>一瞬で伝える</span></p>
+        <p>ていねいに作ったものを</p>
+        <p class="boom">一瞬で伝える</p>
       </div>
       <span class="scr">design power</span>
     </div>
