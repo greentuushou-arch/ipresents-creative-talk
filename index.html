@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="ja">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>盛って選ばれ リアルで愛される</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,7 +34,9 @@ html{scroll-behavior:smooth;scroll-padding-top:var(--head)}
 body{background:var(--grain) var(--paper);color:var(--ink);font-family:var(--f-body);font-size:var(--t-body);line-height:1.85;letter-spacing:.06em;-webkit-font-smoothing:antialiased;overflow-x:clip}
 h1,h2,h3,p,ul,ol,dl,dd{margin:0}
 h2,h3{text-wrap:balance;line-height:1.4;font-weight:800;word-break:auto-phrase}
-.insight,.say,.conclude,.def p,.fv-copy,.era-note,.lead{word-break:auto-phrase}
+.insight,.say,.conclude,.def p,.fv-copy,.era-note,.lead,li,.toc .d,.stmt p,.shot p,.src,.end-q,.end-a,.turn p{word-break:auto-phrase}
+p,li{text-wrap:pretty}
+.mark{white-space:nowrap}
 .sp{display:none}
 .wrap{width:100%;max-width:1240px;margin-inline:auto}
 section{position:relative;padding-block:clamp(72px,11vh,140px);padding-left:max(16px,4vw);padding-right:max(16px,4vw)}
@@ -343,6 +345,18 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 @media (max-width:1100px){ .gnav{display:none} }
 @media (max-width:760px){
   .sp{display:inline}
+  .pc{display:none}
+  .ph{flex-direction:column;align-items:center;gap:2px}
+  .ph b,.ph span{white-space:nowrap}
+  .ph span{font-size:11px;letter-spacing:.12em}
+  .pairs-note{font-size:15px;text-align:center}
+  .toc .d{text-wrap:balance}
+  .shots{grid-template-columns:1fr}
+  .shot .top{white-space:nowrap}
+  .rule-q li{font-size:17px}
+  .end-q{font-size:34px}
+  .def .boom{font-size:clamp(44px,13vw,56px)}
+  .insight{font-size:24px}
   .setlog,.two,.rule{grid-template-columns:1fr}
   .logotype .tag{display:none}
   .toc{grid-template-columns:1fr 1fr}
@@ -359,7 +373,6 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
   .peel-stage{grid-template-columns:1fr;align-content:center;gap:20px;padding-block:40px 80px}
   .pphoto{width:min(56vw,280px)}
   .vs{grid-template-columns:minmax(0,.55fr) minmax(0,1fr) minmax(0,1fr);font-size:14px}
-  .shots{grid-template-columns:1fr 1fr}
   .logo span{display:none}
 }
 @media (prefers-reduced-motion:reduce){
@@ -380,7 +393,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 <!-- FV -->
 <section id="fv" class="full" data-label="はじめに">
   <div class="wrap fv-in">
-    <p class="kicker">アイプレゼンツ社員研修　クリエイティブの力</p>
+    <p class="kicker">アイプレゼンツ社員研修<span class="pc">　</span><br class="sp">クリエイティブの力</p>
     <h1 class="logotype" aria-label="MORI REAL">
       <span class="c mo">MORI<i class="spark" style="left:-6%;top:8%;--s:.16em"></i><i class="spark" style="left:96%;top:2%;--s:.1em;--d:.9s"></i><i class="spark" style="left:88%;top:70%;--s:.07em;--d:1.6s"></i></span>
       <span class="c re">REAL<span class="tag" aria-hidden="true"><span class="rec">REC</span> NO FILTER</span></span>
@@ -404,7 +417,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
           <div class="hud"><span class="rec">REC</span><span>NO FILTER</span></div>
         </div>
     </div>
-    <p class="pairs-note">ここでの「盛る」は 作り物ではありません<br>本物の商品を <b>ライティングとレタッチ</b>で より美味しく見せることです</p>
+    <p class="pairs-note">ここでの「盛る」は <br class="sp">作り物ではありません<br>本物の商品を <br class="sp"><b>ライティングとレタッチ</b>で <br class="sp">より美味しく見せることです</p>
   </div>
 </section>
 
@@ -473,7 +486,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
     </div>
     <div class="def rv">
       <div class="def-txt">
-        <p class="heart">大切なのは <span class="mark">「心がある丁寧さ」</span></p>
+        <p class="heart">大切なのは <br class="sp"><span class="mark">「心がある丁寧さ」</span></p>
         <p>ていねいに作ったものを</p>
         <p class="boom">一瞬で伝える</p>
       </div>
@@ -599,7 +612,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
       <div class="num"><span class="v">5,858<small>件</small></span><span class="k">レビュー</span></div>
     </div>
     <p class="say rv">期待を裏切っていない証拠<br>皆さんのリアルには もう力がある</p>
-    <p class="src rv">2026年10月30日時点　楽天市場 ショップページより</p>
+    <p class="src rv">2026年10月30日時点<span class="pc">　</span><br class="sp">楽天市場 ショップページより</p>
   </div>
 </section>
 
